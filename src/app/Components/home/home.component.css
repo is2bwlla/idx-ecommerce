@@ -1,0 +1,118 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/hello-kitty-restaurant.jpg") no-repeat center center;
+    background-size: cover;
+    filter: blur(4px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 70vw;
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.product-card {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-img-container {
+    background-color: pink;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-card-img-container img {
+    width: 80%;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.product-info {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-cod, .product-description {
+    font-size: 14px;
+    color: gray;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: palevioletred;
+}
+
+.input-quantity {
+    width: 40px;
+    text-align: center;
+    margin: 10px 0;
+    outline: none;
+    border: 2px solid pink;
+}
+
+.buy {
+    border: none;
+    height: 30px;
+    background-color: #ffc0cb;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buy:hover {
+    background-color: #faa4b2;
+    transform: scale(1.05);
+    font-family: 'Poppins', sans-serif;
+}
