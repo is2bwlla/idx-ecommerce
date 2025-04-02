@@ -1,0 +1,8 @@
+<div *ngFor="let produto of produtos">
+    <div (click)="verDetalhes(produto.id)" style="cursor: pointer;">
+      <img [src]="produto.thumbnail" alt="Produto" width="100" height="100"/>
+      <p>{{ produto.title }}</p>
+      <p>{{ produto.price | currency }}</p>
+    </div>
+  </div>
+

@@ -25,7 +25,8 @@ export class LoginComponent {
   observer: Observer<any> = {
     next: (res: any) => {
       console.log(res.username)
-      this.router.navigate(['/'])
+      localStorage.setItem('usuario', JSON.stringify(res))
+      this.router.navigate(['home'])
     },
     error: (err) => {
       console.error(err.error.message)
@@ -38,7 +39,7 @@ export class LoginComponent {
   logar() {
     this.loginService.login(
       this.loginForm.controls.username.value!, 
-      this.loginForm.controls.password.value!
+      this.loginForm.controls.password.value!,
     ).subscribe(this.observer);
   }
 }
