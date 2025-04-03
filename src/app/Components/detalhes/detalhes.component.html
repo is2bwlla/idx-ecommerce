@@ -1,6 +1,19 @@
-<div *ngIf="produtoDetalhes">
-    <h2>{{ produtoDetalhes.title }}</h2>
-    <img [src]="produtoDetalhes.thumbnail" alt="Produto" width="300"/>
-    <p>{{ produtoDetalhes.description }}</p>
-    <p>Preço: {{ produtoDetalhes.price | currency }}</p>
+<div class="flex bg-[#d87093] justify-center h-screen">
+  <div class="bg-white w-[60%]">
+    <app-header></app-header>
+    <div class="p-4 flex justify-center items-center">
+      <div class="">
+          <div *ngIf="produtoDetalhes" class="flex flex-col justify-between items-center gap-3 p-2 w-2xl">
+              <h2 class="text-xl font-semibold">{{ produtoDetalhes.title }}</h2>
+              <img [src]="produtoDetalhes.thumbnail" alt="Produto"class="w-70 bg-[#d87093] rounded-md"/>
+              <p class="w-2xl text-justify">{{ produtoDetalhes.description }}</p>
+              <p class="text-xl text-red-500">Preço: {{ produtoDetalhes.price | currency }}</p>
+              <button class="bg-[#d87093] p-2 rounded-sm text-white font-semibold">COMPRAR</button>
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
+  
+  
+  

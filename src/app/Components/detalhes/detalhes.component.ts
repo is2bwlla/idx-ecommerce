@@ -2,10 +2,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ProdutosService } from '../../Services/Produtos/produtos.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-detalhes',
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './detalhes.component.html',
   styleUrl: './detalhes.component.css'
 })

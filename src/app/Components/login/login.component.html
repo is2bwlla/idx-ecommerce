@@ -1,17 +1,29 @@
-<div>
-    <form [formGroup]="loginForm">
-        <label for="username">Username: </label>
-        <input type="text" id="username" class="border" [formControl]="loginForm.controls.username">
-        <br/>
+<div class="w-screen h-screen flex justify-center items-center bg-linear-65 from-[#d87093] to-[#ffc0cb]">
+    <div class=" bg-white">
+        <div class="grid grid-cols-2">
+            <img src="hello-kitty-login.jpg" alt="Hello Kitty" class="bg-[#d87093]">
+            <div class="flex flex-col items-center justify-center gap-3 w-full">
+                <form [formGroup]="loginForm" class="flex flex-col justify-center items-center">
+                    <label for="username" class="text-base self-start">USERNAME: </label>
+                    <input type="text" id="username" class="p-2 text-base text-[#d87093] outline-none border-[#ccc] border rouded-md" [formControl]="loginForm.controls.username">
+                    <br/>
+            
+                    <label for="password" class="text-base self-start">PASSWORD: </label>
+                    <input type="text" id="password" class="p-2 text-base text-[#d87093] outline-none border-[#ccc] border rouded-md" [formControl]="loginForm.controls.password"/>
+                </form>
 
-        <label for="password">Password: </label>
-        <input type="text" id="password" class="border" [formControl]="loginForm.controls.password"/>
-        <br/>
+                <button (click)="logar()" class="self-center w-[40%] border-none h-10 bg-[#ffc0cb] hover:bg-[#faa4b2] ease-in-out cursor-pointer font-semibold rounded-md text-white">LOGIN</button>
 
-        <button (click)="logar()">Logar</button>
-    </form>
+                <!-- {{ loginForm.controls.username.value }}
+                {{ loginForm.controls.password.value }}
+                {{ loginForm.valid }} -->
+            </div>
+        
+            
+        </div>
 
-    {{ loginForm.controls.username.value }}
-    {{ loginForm.controls.password.value }}
-    {{ loginForm.valid }}
+        
+    </div>
 </div>
+
+

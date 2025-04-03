@@ -1,16 +1,14 @@
-import { Component, Inject, inject, OnInit, signal } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { LoginService } from '../../Services/Login/login.service';
-import { Observable, Observer } from 'rxjs';
+
 import { ProdutosService } from '../../Services/Produtos/produtos.service';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-produtos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.css',
 })

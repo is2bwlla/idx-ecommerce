@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../Services/Login/login.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-perfil',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './perfil.component.html',
   styleUrl: './perfil.component.css'
 })

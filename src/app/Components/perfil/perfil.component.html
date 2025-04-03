@@ -1,6 +1,24 @@
-<div *ngIf="usuario">
-    <img [src]="usuario.image" alt="usuario" width="300"/>
-    <h2>{{ usuario.firstName }}</h2>
-    <p>{{ usuario.gender }}</p>
-    <p>{{ usuario.email }}</p>
-</div>
+
+
+<div class="flex bg-[#d87093] justify-center h-screen">
+    <div class="bg-white w-[60%]">
+      <app-header></app-header>
+      <div class="p-4 flex justify-center items-center">
+        <div class="flex flex-col">
+            <h1 class="text-3xl font-bold self-center text-[#d87093]">MY PROFILE</h1>
+            <div *ngIf="usuario" class="flex flex-col justify-center">
+                <img [src]="usuario.image" alt="usuario" width="300"/>
+                <h2 class="self-center text-2xl font-semibold">{{usuario.firstName}}</h2>
+                <br>
+                <p class="text-xl font-semibold text-[#d87093]">INFO</p>
+                <p class="">NAME: {{ usuario.firstName }} {{usuario.lastName}}</p>
+                <p>GENDER: {{ usuario.gender }}</p>
+                <p>E-MAIL: {{ usuario.email }}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
+    

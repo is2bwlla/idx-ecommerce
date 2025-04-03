@@ -1,10 +1,19 @@
-<div class="container">
-  <div *ngFor="let produto of produtos" class="card">
-      <div (click)="verDetalhes(produto.id)" style="cursor: pointer;">
-        <img [src]="produto.thumbnail" alt="Produto" width="100" height="100"/>
-        <p>{{ produto.title }}</p>
-        <p>{{ produto.price | currency }}</p>
+<div class="flex bg-[#d87093] justify-center">
+  <div class="bg-white">
+    <app-header></app-header>
+    <div class="p-6">
+      <div class="grid grid-cols-3 gap-4">
+        <div *ngFor="let produto of produtos">
+          <div (click)="verDetalhes(produto.id)" class="border border-[#d87093] w-50 flex flex-col items-center p-2.5 h-70 justify-between">
+            <img [src]="produto.thumbnail" alt="Produto" class="w-28 h-28 bg-[#d87093] rounded-md"/>
+            <p class="font-semibold text-lg">{{ produto.title }}</p>
+            <p class="text-red-400 text-base font-semibold">{{ produto.price | currency }}</p>
+            <button class="bg-[#d87093] p-2 rounded-sm text-white font-semibold">COMPRAR</button>
+          </div>
+        </div>
       </div>
+    </div>
+    
   </div>
 </div>
 
